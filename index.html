@@ -10,10 +10,13 @@
     fetch(url, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: 'password=12&confirm-password=12'
-    });
+    })
+    .then(response => response.json()) // Обработка ответа как JSON
+    .then(data => console.log('Успех:', data)) // Вывод успешного ответа
+    .catch(error => console.error('Ошибка:', error));
   </script>
 </body>
 </html>
