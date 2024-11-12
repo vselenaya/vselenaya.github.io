@@ -4,19 +4,15 @@
   <meta charset="UTF-8">
 </head>
 <body>
-  <ht2>Hello!</ht2>
+  <h2>Hello!</h2>
   <script>
     const url = 'http://cats.is-course.ru/settings';
-    const data = {
-        password: 12,
-        confirm-password: 12
-    };
     fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: 'password=123&confirm-password=123'
     });
   </script>
 </body>
